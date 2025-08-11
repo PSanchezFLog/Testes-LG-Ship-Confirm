@@ -1,4 +1,4 @@
-# Renomeador Automático de Comprovantes de Rendimentos (PDF)
+# Separador de Ship Confirm da LG
 ###### Versão 1.0
 ## Funcionalidade principal: Separa arquivos de NOTFIS com funcionalidade diferentes
 
