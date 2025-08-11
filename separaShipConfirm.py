@@ -17,17 +17,17 @@ def separarWMS ():
             with open(caminho_arquivo, 'r', encoding='utf-8', errors='ignore') as arquivo:
                 conteudo = arquivo.read()
                 
-            if 'RELEASE TO WMS' in conteudo:
-                destino = os.path.join(pasta_destinoWMS, nome_arquivo)
-                shutil.move(caminho_arquivo, destino)
-                print(f'WMS Movido: {nome_arquivo}')
+            if 'RELEASE TO WMS' in conteudo:                                    # Procura pelo RELEASE TO WMS dentro do arquivo
+                destino = os.path.join(pasta_destinoWMS, nome_arquivo)          # Mostra o caminho da pasta de destino do arquivo
+                shutil.move(caminho_arquivo, destino)                           # Efetivamente move o arquivo para a outra pasta
+                print(f'WMS Movido: {nome_arquivo}')                            # Visual para informar que foi movido
             
-            elif 'SHIP CONFIRM' in conteudo:
-                destino = os.path.join(pasta_destinoSHIP, nome_arquivo)
-                shutil.move(caminho_arquivo,destino)
-                print(f'SHIP Movido: {nome_arquivo}')
+            elif 'SHIP CONFIRM' in conteudo:                                    # Procura pelo RELEASE TO WMS dentro do arquivo
+                destino = os.path.join(pasta_destinoSHIP, nome_arquivo)         # Mostra o caminho da pasta de destino do arquivo
+                shutil.move(caminho_arquivo,destino)                            # Efetivamente move o arquivo para a outra pasta
+                print(f'SHIP Movido: {nome_arquivo}')                           # Visual para informar que foi movido
             
-            else:
-                destino = os.path.join(pasta_indefinido, nome_arquivo)
-                shutil.move(caminho_arquivo, destino)
-                print(f'INDEFINIDO Movido: {nome_arquivo}')
+            else:                                                               # Caso não se adeque nos demais
+                destino = os.path.join(pasta_indefinido, nome_arquivo)          # Mostra o caminho da pasta de destino do arquivo
+                shutil.move(caminho_arquivo, destino)                           # Efetivamente move o arquivo para a outra pasta
+                print(f'INDEFINIDO Movido: {nome_arquivo}')                     # Visual para informar que foi movido
